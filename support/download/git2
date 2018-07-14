@@ -38,22 +38,11 @@ _git() {
     eval ${GIT} "${@}"
 }
 
-# Try a shallow clone, since it is faster than a full clone - but that only
-# works if the version is a ref (tag or branch). Before trying to do a shallow
-# clone we check if ${cset} is in the list provided by git ls-remote. If not
 # we fall back on a full clone.
 #
 # Messages for the type of clone used are provided to ease debugging in case of
 # problems
 git_done=0
-if [ -n "$(_git ls-remote "'${repo}'" "'${cset}'" 2>&1)" ]; then
-    printf "Doing shallow clone\n"
-    if _git clone ${verbose} "${@}" --depth 1 -b "'${cset}'" "'${repo}'" "'${basename}'"; then
-        git_done=1
-    else
-        printf "Shallow clone failed, falling back to doing a full clone\n"
-    fi
-fi
 if [ ${git_done} -eq 0 ]; then
     printf "Doing full clone\n"
     _git clone ${verbose} "${@}" "'${repo}'" "'${basename}'"
@@ -79,12 +68,6 @@ _git checkout -q "'${cset}'"
 # Get date of commit to generate a reproducible archive.
 # %cD is RFC2822, so it's fully qualified, with TZ and all.
 date="$( _git log -1 --pretty=format:%cD )"
-
-# There might be submodules, so fetch them.
-if [ ${recurse} -eq 1 ]; then
-    _git submodule update --init --recursive
-fi
-
 
 popd >/dev/null
 
