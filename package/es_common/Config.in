@@ -1,0 +1,6 @@
+config BR2_PACKAGE_ES_COMMON
+	bool "embedded system common lib"
+	help
+	  the embedded system common lib is porting from linux kernel
+	  what could support efficent common data structure and stl in C
+	  Language in Embeded system in all machine platform

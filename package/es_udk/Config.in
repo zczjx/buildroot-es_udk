@@ -1,0 +1,9 @@
+config BR2_PACKAGE_ES_UDK
+	bool "embedded system unify development kit"
+	select BR2_PACKAGE_FFMPEG
+	select BR2_PACKAGE_FFMPEG_SWSCALE
+	help
+
+	  the embedded system unify development kit supply unify api for all 
+	  kinds of devices and 3d-party opensource packages for application
+	  develop

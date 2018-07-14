@@ -83,6 +83,19 @@ define DOWNLOAD_GIT
 		$($(PKG)_DL_OPTS)
 endef
 
+define DOWNLOAD_GIT2
+	$(EXTRA_ENV) $(DL_WRAPPER) -b git2 \
+		-o $(DL_DIR)/$($(PKG)_SOURCE) \
+		$(if $($(PKG)_GIT_SUBMODULES),-r) \
+		-H $(PKGDIR)/$($(PKG)_RAWNAME).hash \
+		$(QUIET) \
+		-- \
+		$($(PKG)_SITE) \
+		$($(PKG)_DL_VERSION) \
+		$($(PKG)_BASENAME_RAW) \
+		$($(PKG)_DL_OPTS)
+endef
+
 define DOWNLOAD_BZR
 	$(EXTRA_ENV) $(DL_WRAPPER) -b bzr \
 		-o $(DL_DIR)/$($(PKG)_SOURCE) \
@@ -196,6 +209,7 @@ define DOWNLOAD_INNER
 	if test -n "$(1)" ; then \
 		case "$($(PKG)_SITE_METHOD)" in \
 			git) $($(3)_GIT) && exit ;; \
+			git2) $($(3)_GIT2) && exit ;; \
 			svn) $($(3)_SVN) && exit ;; \
 			cvs) $($(3)_CVS) && exit ;; \
 			bzr) $($(3)_BZR) && exit ;; \
