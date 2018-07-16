@@ -1,0 +1,10 @@
+if BR2_TOOLCHAIN_EXTERNAL_LINARO_ARMV8L_GCC4_EABIHF
+
+config BR2_TOOLCHAIN_EXTERNAL_PREFIX
+	default "armv8l-linux-gnueabihf"
+
+config BR2_PACKAGE_PROVIDES_TOOLCHAIN_EXTERNAL
+	default "toolchain-external-linaro-armv8l-gcc4-eabihf"
+
+endif
+
