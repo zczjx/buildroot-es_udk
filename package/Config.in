@@ -11,6 +11,7 @@ menu "Target packages"
 menu "es_udk related package"
 	source "package/es_udk/Config.in"
 	source "package/es_common/Config.in"
+	source "package/es_demo_cv_detect/Config.in"
 endmenu
 
 menu "Audio and video applications"

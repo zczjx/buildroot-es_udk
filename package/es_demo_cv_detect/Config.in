@@ -1,0 +1,4 @@
+config BR2_PACKAGE_ES_DEMO_CV_DETECT
+bool"es_demo_cv_detect"
+help
+  es_demo_cv_detect to show
