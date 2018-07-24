@@ -1,0 +1,5 @@
+config BR2_PACKAGE_ARM_LINUX_BSP_TESTS
+	bool "arm-linux-bsp-tests bsp test case"
+	help
+		arm-linux-bsp-tests bsp test case
+
