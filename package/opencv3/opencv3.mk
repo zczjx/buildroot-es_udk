@@ -83,6 +83,7 @@ OPENCV3_CONF_OPTS += \
 	-DBUILD_opencv_java=OFF \
 	-DBUILD_opencv_ml=$(if $(BR2_PACKAGE_OPENCV3_LIB_ML),ON,OFF) \
 	-DBUILD_opencv_objdetect=$(if $(BR2_PACKAGE_OPENCV3_LIB_OBJDETECT),ON,OFF) \
+	-DBUILD_opencv_face=$(if $(BR2_PACKAGE_OPENCV3_LIB_FACE),ON,OFF) \
 	-DBUILD_opencv_photo=$(if $(BR2_PACKAGE_OPENCV3_LIB_PHOTO),ON,OFF) \
 	-DBUILD_opencv_shape=$(if $(BR2_PACKAGE_OPENCV3_LIB_SHAPE),ON,OFF) \
 	-DBUILD_opencv_stitching=$(if $(BR2_PACKAGE_OPENCV3_LIB_STITCHING),ON,OFF) \

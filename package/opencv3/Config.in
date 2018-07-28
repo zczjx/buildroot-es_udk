@@ -160,6 +160,14 @@ config BR2_PACKAGE_OPENCV3_LIB_OBJDETECT
 	  Include opencv_objdetect (object detection) module into the
 	  OpenCV build.
 
+config BR2_PACKAGE_OPENCV3_LIB_FACE
+	bool "face"
+	# opencv_core dependency is already enabled
+	select BR2_PACKAGE_OPENCV3_LIB_OBJDETECT
+	help
+	  Include opencv_face (face detection) module into the
+	  OpenCV build.
+
 config BR2_PACKAGE_OPENCV3_LIB_PHOTO
 	bool "photo"
 	select BR2_PACKAGE_OPENCV3_LIB_IMGPROC
