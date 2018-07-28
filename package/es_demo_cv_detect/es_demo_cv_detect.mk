@@ -11,7 +11,9 @@ ES_DEMO_CV_DETECT_ALWAYS_BUILD = YES
 ES_DEMO_CV_DETECT_INSTALL_STAGING = YES
 ES_DEMO_CV_DETECT_DEPENDENCIES = opencv3
 ES_DEMO_CV_DETECT_CFLAGS = 
-ES_DEMO_CV_DETECT_LDFLAGS = "-lopencv_core -lopencv_imgcodecs  -lopencv_highgui -lopencv_videoio"
+ES_DEMO_CV_DETECT_LDFLAGS = "-lopencv_core -lopencv_imgcodecs -lopencv_videoio \
+							-lopencv_imgproc -lopencv_highgui -lopencv_objdetect \
+							-lpthread"
 OUT_BIN = es_demo_cv_detect
 ES_DEMO_CV_DETECT_MAKE_FLAGS += \
 		CROSS_COMPILE="$(CCACHE) $(TARGET_CROSS)" \
