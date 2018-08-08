@@ -1,5 +1,6 @@
 menuconfig BR2_PACKAGE_ARM_LINUX_BSP_TESTS
 	bool "arm-linux-bsp-test-case"
+	select BR2_PACKAGE_LIBGLIB2
 	help
 		arm linux bsp test case
 
@@ -8,6 +9,7 @@ if BR2_PACKAGE_ARM_LINUX_BSP_TESTS
 config BR2_PACKAGE_ARM_LINUX_BSP_TESTS_RPI
 	bool "arm-linux-bsp-test-case for raspiberry"
 	depends on BR2_PACKAGE_RPI_USERLAND
+	depends on BR2_PACKAGE_RPI_FIRMWARE
 	help
 		arm linux bsp test case for raspiberry
 
