@@ -13,7 +13,8 @@ ARM_LINUX_BSP_TESTS_INSTALL_STAGING = YES
 ARM_LINUX_BSP_TESTS_DEPENDENCIES += libglib2
 ARM_LINUX_BSP_TESTS_CFLAGS = -Wall -I $(STAGING_DIR)/usr/include -g \
 							-rdynamic -fPIC  -L$(STAGING_DIR)/usr/lib \
-							-I $(@D)/include -L$(@D)
+							-I $(@D)/include -L$(@D) -I $(STAGING_DIR)/usr/include/glib-2.0 \
+							-I $(STAGING_DIR)/usr/lib/glib-2.0/include
 ARM_LINUX_BSP_TESTS_LDFLAGS += -lm -lpthread -L$(@D) -lcommon_bsp \
 	-lglib-2.0 -lgmodule-2.0 -lgobject-2.0 -lgio-2.0 -lgthread-2.0
 ARM_LINUX_BSP_TESTS_TEST_CASE_DIR = $(@D)/bin
