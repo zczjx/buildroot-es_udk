@@ -17,11 +17,23 @@ disable_overscan=1
 # 256, 512 or 1024 MB total memory
 gpu_mem_256=100
 gpu_mem_512=100
-gpu_mem_1024=100
+gpu_mem_1024=200
 
 max_usb_current=1
+current_limit_override=0x5A000020
 hdmi_group=2
 hdmi_mode=1
 hdmi_mode=87
 hdmi_cvt 1024 600 60 6 0 0 0
+arm_freq=1200
+force_turbo=1 #Voids Warranty!
+boot_delay=1 #helps to avoid sdcard corruption when force_turbo is enabled.
+over_voltage=4
+sdram_freq=450
+core_freq=450
+gpu_freq=450
+avoid_warnings=2
 
+
+# fixes rpi3 ttyAMA0 serial console
+dtoverlay=pi3-miniuart-bt
