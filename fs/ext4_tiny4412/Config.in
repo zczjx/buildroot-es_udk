@@ -1,0 +1,39 @@
+config BR2_TARGET_ROOTFS_EXT4_TINY4412
+	bool "ext4 specify for tiny 4412"
+	select BR2_PACKAGE_HOST_E2FSPROGS
+	help
+	  Build an eext4 root filesystem for tiny4412 only
+
+if BR2_TARGET_ROOTFS_EXT4_TINY4412
+
+config BR2_TARGET_ROOTFS_EXT4_TINY4412_LABEL
+	string "filesystem label"
+
+config BR2_TARGET_ROOTFS_EXT4_TINY4412_SIZE
+	string "fs image size"
+	default "314572800"
+	help
+	  The size of the filesystem image. If it does not have a suffix,
+	  it is interpreted as power-of-two kilobytes. If it is suffixed
+	  by 'k', 'm', 'g', 't' (either upper-case or lower-case), then
+	  it is interpreted in power-of-two kilobytes, megabytes,
+	  gigabytes, terabytes, etc.
+
+config BR2_TARGET_ROOTFS_EXT4_TINY4412_INODES
+	int "exact number of inodes (leave at 0 for auto calculation)"
+	default 0
+
+config BR2_TARGET_ROOTFS_EXT4_TINY4412_MKFS_OPTIONS
+	string "options for make_ext4fs"
+	default "-s -a root"
+
+config BR2_TARGET_ROOTFS_EXT4_TINY4412_RESBLKS
+	int "reserved blocks percentage"
+	default 5
+	help
+	  The number of blocks on the filesystem (as a percentage of the
+	  total number of blocks), that are reserved for use by root.
+	  Traditionally, this has been 5%, and all ext-related tools still
+	  default to reserving 5% when creating a new ext filesystem.
+
+endif # BR2_TARGET_ROOTFS_EXT4_TINY4412
