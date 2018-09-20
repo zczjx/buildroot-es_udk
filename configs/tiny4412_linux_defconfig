@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Buildroot 2018.02.3-g78da3ea-dirty Configuration
+# Buildroot 2018.02.3-gc857a9f-dirty Configuration
 #
 BR2_HAVE_DOT_CONFIG=y
 BR2_HOST_GCC_AT_LEAST_4_5=y
@@ -779,6 +779,7 @@ BR2_PACKAGE_QT5_JSCORE_AVAILABLE=y
 # BR2_PACKAGE_WILC1000_FIRMWARE is not set
 # BR2_PACKAGE_WILINK_BT_FIRMWARE is not set
 # BR2_PACKAGE_ZD1211_FIRMWARE is not set
+BR2_PACKAGE_TINY4412_USERLAND=y
 # BR2_PACKAGE_A10DISP is not set
 # BR2_PACKAGE_ACPICA is not set
 # BR2_PACKAGE_ACPITOOL is not set
