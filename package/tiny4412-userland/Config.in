@@ -1,0 +1,15 @@
+config BR2_PACKAGE_TINY4412_USERLAND
+	bool "tiny4412-userland"
+	depends on BR2_arm
+	depends on BR2_INSTALL_LIBSTDCPP
+	depends on BR2_TOOLCHAIN_HAS_THREADS
+	depends on !BR2_STATIC_LIBS
+	help
+		tiny4412 rootfs userland prebuild files
+		https://github.com/zczjx/tiny4412-userland
+
+if BR2_PACKAGE_TINY4412_USERLAND
+
+
+endif
+

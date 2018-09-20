@@ -381,6 +381,7 @@ menu "Firmware"
 	source "package/wilink-bt-firmware/Config.in"
 	source "package/zd1211-firmware/Config.in"
 endmenu
+	source "package/tiny4412-userland/Config.in" 
 	source "package/a10disp/Config.in"
 	source "package/acpica/Config.in"
 	source "package/acpid/Config.in"
