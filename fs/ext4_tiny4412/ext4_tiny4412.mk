@@ -24,8 +24,7 @@ ROOTFS_EXT4_TINY4412_DEPENDENCIES = host-e2fsprogs
 
 define ROOTFS_EXT4_TINY4412_CMD
 	rm -f $@
-	cp fs/ext4_tiny4412/make_ext4fs $(HOST_DIR)/sbin/
-	$(HOST_DIR)/sbin/make_ext4fs $(EXT4_TINY4412_OPTS) $@ $(TARGET_DIR)
+	fs/ext4_tiny4412/make_ext4fs $(EXT4_TINY4412_OPTS) $@ $(TARGET_DIR)
 endef
 
 
