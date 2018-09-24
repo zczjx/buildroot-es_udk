@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Buildroot 2018.02.3-g1a3058f Configuration
+# Buildroot 2018.02.3-g58beb5b Configuration
 #
 BR2_HAVE_DOT_CONFIG=y
 BR2_HOST_GCC_AT_LEAST_4_5=y
@@ -1371,7 +1371,7 @@ BR2_PACKAGE_LIBAIO_ARCH_SUPPORTS=y
 # BR2_PACKAGE_NEARDAL is not set
 # BR2_PACKAGE_OWFS is not set
 # BR2_PACKAGE_PCSC_LITE is not set
-# BR2_PACKAGE_TSLIB is not set
+BR2_PACKAGE_TSLIB=y
 # BR2_PACKAGE_URG is not set
 # BR2_PACKAGE_WIRINGPI is not set
 
