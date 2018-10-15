@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Buildroot 2018.02.3-g58beb5b Configuration
+# Buildroot 2018.02.3-ga691588 Configuration
 #
 BR2_HAVE_DOT_CONFIG=y
 BR2_HOST_GCC_AT_LEAST_4_5=y
@@ -450,7 +450,7 @@ BR2_PACKAGE_ES_UDK=y
 BR2_PACKAGE_ES_COMMON=y
 # BR2_PACKAGE_ES_DEMO_CV_DETECT is not set
 BR2_PACKAGE_ARM_LINUX_BSP_TESTS=y
-# BR2_PACKAGE_ARM_LINUX_BSP_TESTS_EXYNOS_4412 is not set
+BR2_PACKAGE_ARM_LINUX_BSP_TESTS_EXYNOS_4412=y
 
 #
 # Audio and video applications
