@@ -232,6 +232,13 @@ else
 FFMPEG_CONF_OPTS += --disable-libopenh264
 endif
 
+ifeq ($(BR2_PACKAGE_LIBV4L),y)
+FFMPEG_CONF_OPTS += --enable-libv4l2 
+FFMPEG_DEPENDENCIES += libv4l
+else
+FFMPEG_CONF_OPTS += --disable-libv4l2
+endif
+
 ifeq ($(BR2_PACKAGE_LIBVORBIS),y)
 FFMPEG_DEPENDENCIES += libvorbis
 FFMPEG_CONF_OPTS += \
