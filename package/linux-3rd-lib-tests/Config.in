@@ -1,0 +1,6 @@
+config BR2_PACKAGE_LINUX_3RD_LIB_TESTS
+	bool "linux-3rd-lib-tests"
+	select BR2_PACKAGE_LIBGLIB2
+	help
+		linux 3rd lib test cases
+

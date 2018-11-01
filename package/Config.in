@@ -13,6 +13,7 @@ menu "es_udk related package"
 	source "package/es_common/Config.in"
 	source "package/es_demo_cv_detect/Config.in"
 	source "package/arm-linux-bsp-tests/Config.in"
+	source "package/linux-3rd-lib-tests/Config.in"
 endmenu
 
 menu "Audio and video applications"
