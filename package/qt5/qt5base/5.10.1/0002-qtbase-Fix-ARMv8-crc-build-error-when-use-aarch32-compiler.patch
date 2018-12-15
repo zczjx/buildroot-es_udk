@@ -1,0 +1,24 @@
+diff -urN a/src/corelib/tools/qhash.cpp b/src/corelib/tools/qhash.cpp
+--- a/src/corelib/tools/qhash.cpp	2018-02-09 02:24:48.000000000 +0800
++++ b/src/corelib/tools/qhash.cpp	2018-12-15 11:37:45.960806428 +0800
+@@ -133,7 +133,7 @@
+         h = _mm_crc32_u8(h, *p);
+     return h;
+ }
+-#elif defined(__ARM_FEATURE_CRC32)
++#elif defined(__ARM_FEATURE_CRC32) && defined(__aarch64__)
+ static inline bool hasFastCrc32()
+ {
+     return qCpuHasFeature(CRC32);
+diff -urN a/src/corelib/tools/qsimd_p.h b/src/corelib/tools/qsimd_p.h
+--- a/src/corelib/tools/qsimd_p.h	2018-02-09 02:24:48.000000000 +0800
++++ b/src/corelib/tools/qsimd_p.h	2018-12-15 11:24:18.030189859 +0800
+@@ -326,7 +326,7 @@
+ #endif
+ // AArch64/ARM64
+ #if defined(Q_PROCESSOR_ARM_V8) && defined(__ARM_FEATURE_CRC32)
+-#if defined(Q_PROCESSOR_ARM_64)
++#if defined(Q_PROCESSOR_ARM_64) && defined(__aarch64__)
+ // only available on aarch64
+ #define QT_FUNCTION_TARGET_STRING_CRC32      "+crc"
+ #endif
