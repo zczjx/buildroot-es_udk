@@ -12,9 +12,9 @@ LINUX_3RD_LIB_TESTS_ALWAYS_BUILD = YES
 LINUX_3RD_LIB_TESTS_INSTALL_STAGING = YES
 LINUX_3RD_LIB_TESTS_DEPENDENCIES += libglib2
 LINUX_3RD_LIB_TESTS_CFLAGS = -Wall -I $(STAGING_DIR)/usr/include -g \
-							-rdynamic -fPIC  -L$(STAGING_DIR)/usr/lib \
+							-L$(STAGING_DIR)/usr/lib -rdynamic -fPIC \
 							-I $(@D)/include -L$(@D) -I $(STAGING_DIR)/usr/include/glib-2.0 \
-							-I $(STAGING_DIR)/usr/lib/glib-2.0/include -O0 
+							-I $(STAGING_DIR)/usr/lib/glib-2.0/include -O0
 LINUX_3RD_LIB_TESTS_LDFLAGS += -lm -lpthread -L$(@D) -l3rd_common \
 	-lglib-2.0 -lgmodule-2.0 -lgobject-2.0 -lgio-2.0 -lgthread-2.0
 LINUX_3RD_LIB_TESTS_TEST_CASE_DIR = $(@D)/bin

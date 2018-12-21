@@ -15,6 +15,8 @@ TINY4412_USERLAND_DEPENDENCIES +=
 define TINY4412_USERLAND_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 -D $(@D)/etc/init.d/* $(TARGET_DIR)/etc/init.d/
 	$(INSTALL) -m 0755 -D $(@D)/etc/eth0-setting $(TARGET_DIR)/etc/
+	mkdir -p $(TARGET_DIR)/lib/firmware
+	$(INSTALL) -m 0755 -D $(@D)/lib/firmware/* $(TARGET_DIR)/lib/firmware/
 
 endef
 
