@@ -5,7 +5,7 @@
 ################################################################################
 
 OPENCV3_VERSION = master
-OPENCV3_SITE = git@github.com:zczjx/opencv3.git
+OPENCV3_SITE = https://github.com/zczjx/opencv3.git
 OPENCV3_SITE_METHOD = git2
 OPENCV3_INSTALL_STAGING = YES
 OPENCV3_LICENSE = BSD-3-Clause

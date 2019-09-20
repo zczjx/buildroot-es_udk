@@ -7,7 +7,7 @@
 ES_COMMON_VERSION = master
 
 ES_COMMON_SITE_METHOD = git2
-ES_COMMON_SITE = git@github.com:zczjx/es_common.git
+ES_COMMON_SITE = https://github.com/zczjx/es_common.git
 # ES_COMMON_SOURCE = es_common-$(ES_COMMON_VERSION).tar.gz
 ES_COMMON_ALWAYS_BUILD = YES
 ES_COMMON_INSTALL_STAGING = YES

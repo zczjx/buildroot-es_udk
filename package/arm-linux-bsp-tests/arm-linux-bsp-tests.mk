@@ -7,7 +7,7 @@
 ARM_LINUX_BSP_TESTS_VERSION = master
 
 ARM_LINUX_BSP_TESTS_SITE_METHOD = git2
-ARM_LINUX_BSP_TESTS_SITE = git@github.com:zczjx/arm-linux-bsp-tests.git
+ARM_LINUX_BSP_TESTS_SITE = https://github.com/zczjx/arm-linux-bsp-tests.git
 ARM_LINUX_BSP_TESTS_ALWAYS_BUILD = YES
 ARM_LINUX_BSP_TESTS_INSTALL_STAGING = YES
 ARM_LINUX_BSP_TESTS_DEPENDENCIES += libglib2
